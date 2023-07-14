@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <script>
       tailwind.config = {
         theme: {
@@ -17,7 +18,16 @@
     </script>
     <title>Music PLayer</title>
 </head>
-<body class="flex justify-center items-center">
-    <div id="main" class="">Hey</div>
+<body class="w-[100vw] h-[100vh]">
+    <div id="main" class="flex relative w-[45vw] border-2 border-black h-[10vh] rounded-xl bg-[whitesmoke] left-[27.5vw] top-[45vh] justify-around self-center overflow-hidden z-[1]">
+    <img src="ex.svg" alt="" class="flex self-center h-10 w-10 relative ml-1 justify-center">
+    <img id="prev" src="prev.svg" alt="" class="flex self-center sm:h-[6vh] h-[8vw] relative ml-1 justify-center active:scale-[1.1]">
+    <img id="play" src="play.svg" alt="" class="flex self-center sm:h-[6vh] h-[8vw] relative ml-1 justify-center active:scale-[1.1]">
+    <img id="next" src="next.svg" alt="" class="flex self-center sm:h-[6vh] h-[8vw] relative ml-1 justify-center active:scale-[1.1]">
+    <audio src="blast.mp3" id="audio"></audio>
+  </div>
+  <div class="after"></div>
+  <div id="status" class="flex items-center justify-center h-[6vh] w-[40.5vw] bg-green-200 relative right-[63vw] z-[0] top-[4.2vh] left-[30.5vw] md:top-[-6vh] md:left-[29vw]"><div id="pro" class="h-[0.7vh] w-[35vw] bg-black rounded-full"></div></div>
+  <script src="script.js"></script>
 </body>
 </html>
