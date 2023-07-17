@@ -18,20 +18,25 @@
     </script>
     <title>Music PLayer</title>
 </head>
-<body class="w-[100vw] h-[100vh]">
-    <div id="main" class="flex relative w-[45vw] border-2 border-black h-[10vh] rounded-xl bg-[whitesmoke] left-[27.5vw] top-[45vh] justify-around self-center overflow-hidden z-[1]">
-    <img src="ex.svg" alt="" class="flex self-center h-10 w-10 relative ml-1 justify-center">
-    <img id="prev" src="prev.svg" alt="" class="flex self-center sm:h-[6vh] h-[8vw] relative ml-1 justify-center active:scale-[1.1]">
-    <img id="play" src="play.svg" alt="" class="flex self-center sm:h-[6vh] h-[8vw] relative ml-1 justify-center active:scale-[1.1]">
-    <img id="next" src="next.svg" alt="" class="flex self-center sm:h-[6vh] h-[8vw] relative ml-1 justify-center active:scale-[1.1]">
-    <audio src="blast.mp3" id="audio"></audio>
+<body class="w-[100vw] h-[100vh] bg">
+  <h1 id="header" class="relative top-[10vh] md:top-[5vh] text-center font-extrabold md:text-[10vh] text-[15vw]">Music Player</h1>
+    <div id="main" class="flex relative w-[60vw] md:w-[45vw] border-2 border-black h-[10vh] rounded-xl left-[20vw] md:left-[27.5vw] top-[45vh] justify-around self-center z-[1] bgm">
+    <img id="mimg" src="bgTrap.webp" alt="" class="flex h-20 w-20 relative ml-1 justify-center z-[1] bottom-[5vh] rounded-full">
+    <img id="prev" src="prev.svg" alt="" class="flex self-center sm:h-[6vh] h-[8vw] relative ml-1 justify-center active:scale-[1.1] bg-white rounded-full">
+    <img id="play" src="play.svg" alt="" class="flex self-center sm:h-[6vh] h-[8vw] relative ml-1 justify-center active:scale-[1.1]  bg-white rounded-full">
+    <img id="next" src="next.svg" alt="" class="flex self-center sm:h-[6vh] h-[8vw] relative ml-1 justify-center active:scale-[1.1] bg-white rounded-full">
+    <audio src="bgTrap.mp3" id="audio"></audio>
   </div>
-  <div class="after">
-    <img src="" alt="">
+  <div id="m2" class="after bgs">
+    <h1 id="heada" class="p-[2%] text-black font-semibold border-2 border-black align-middle text-center whitespace-nowrap">bgTrap</h1>
+    <img src="bgTrap.webp" alt="" id="img" class="w-[100%] h-[60%] md:h-[68%] relative">
   </div>
-  <div id="status" class="flex items-center justify-center h-[6vh] w-[40.5vw] bg-green-200 relative right-[63vw] z-[0] top-[4.2vh] left-[30.5vw] md:top-[-6vh] md:left-[29vw]">
-  <div id="ppro" class="h-[0.7vh] w-[35vw] bg-green-500 rounded-full"><div id="pro" class="h-[0.7vh] w-[35vw] bg-black rounded-full"></div></div>
+  <div id="status" class="flex items-center justify-center h-[6vh] w-[58vw] md:w-[43vw] relative right-[63vw] z-[0] top-[4.7vh] left-[21vw] md:top-[-6vh] md:left-[28.5vw] bgs">
+  <div id="ppro" class="h-[0.7vh] w-[50%] left-[15%] relative  rounded-full bgpp">
+    <div id="pro" class="h-[0.7vh] w-[0vw] rounded-full bgp"></div>
+  </div>
 </div>
+<span id="time" class="left-[25vw] top-[10.5vh] relative z-[5] md:left-[39%] md:top-[-10.6%]">0:00/0:00</span>
   <script src="script.js"></script>
 </body>
 </html>
