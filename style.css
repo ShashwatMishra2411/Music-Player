@@ -1,9 +1,18 @@
 @import './node_modules/tailwindcss/base.css';
 @import './node_modules/tailwindcss/components.css';
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.ts1{
+  font-family: 'Lugrasimo', cursive;
+}
+.ts2{
+  font-family: 'Tektur', cursive;
 }
 .after{
     content: '';
