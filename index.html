@@ -9,6 +9,9 @@
       tailwind.config = {
         theme: {
           extend: {
+            animation:{
+              spin: "spin 5s linear infinite"
+            },
             colors: {
               clifford: '#da373d',
             }
@@ -16,6 +19,7 @@
         }
       }
     </script>
+    <script defer src="script.js"></script>
     <title>Music PLayer</title>
 </head>
 <body class="w-[100vw] h-[100vh] bg">
@@ -37,6 +41,5 @@
   </div>
 </div>
 <span id="time" class="left-[25vw] top-[10.5vh] relative z-[5] md:left-[39%] md:top-[-10.6%] ts2">0:00/0:00</span>
-  <script src="script.js"></script>
 </body>
 </html>
