@@ -9,8 +9,8 @@ play.addEventListener("click", ()=>{
     else
     playSong()
 })
-audio.addEventListener("loadedmetadata", ()=>{
-    time.innerHTML = `${Math.floor(audio.currentTime/60)}:${Math.floor(audio.currentTime%60)} / ${Math.floor(audio.duration/60)}:${Math.floor(audio.duration%60)}`
+audio.addEventListener("loadedmetadata", async ()=>{
+    time.innerHTML = `${Math.floor(audio.currentTime/60)}:${Math.floor(audio.currentTime%60)} / ${await Math.floor(audio.duration/60)}:${Math.floor(audio.duration%60)}`
     })
 function load(songI){
     audio.src = `${songL[songI]}.mp3`
@@ -41,11 +41,13 @@ function load(songI){
 }
 function playSong(){
     play.classList.add("play")
+    mimg.classList.add("animate-spin")
     play.src = "pause.svg"
     audio.play()
 }
 function pauseSong(){
     play.classList.remove("play")
+    mimg.classList.remove("animate-spin")
     play.src = "play.svg"
     audio.pause()
 }
@@ -93,10 +95,6 @@ function update(e){
     var {currentTime, duration} = e.target
     var pP = (currentTime/duration)*100
     pro.style.width = `${pP}%`
-    var cmin = Math.floor(currentTime/60)
-    var csec = Math.floor(currentTime%60)
-    var tmin = Math.floor(duration/60)
-    var tsec = Math.floor(duration%60)
     time.innerHTML = `${Math.floor(audio.currentTime/60)}:${Math.floor(audio.currentTime%60)}/${Math.floor(audio.duration/60)}:${Math.floor(audio.duration%60)}`
 }
 
